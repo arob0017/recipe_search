@@ -49,3 +49,16 @@ img {
     width: 600;
     height: 400;
 }
+
+
+
+.uk-container-small {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.search-results {
+    box-sizing: content-box;
+    justify-content: space-around;
+}

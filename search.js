@@ -6,12 +6,12 @@ function recentlySearched() {
 
     $("#searchResults").empty();
 
-    if (storedRecipes) {
+    if (recentSearch) {
         $("#recentlySearched").empty();
 
         var btns = $("<div>").attr("class", "buttons");
         for (var i = 0; storedRecipes.length > i; i++) {
-            var recipeBtn = $("<button>").attr("href", "#").attr("id", "recipeBtn").text(recentSearch[i]);
+            var recipeBtn = $("<button>").attr("href", "#").attr("id", "recipeBtn").text(storedRecipes[i]);
             recipeBtn.attr("class", "uk-button uk-button-primary uk-button-large");
             btns.prepend(recipeBtn);
             $("#recentlySearched").append(btns);
@@ -33,7 +33,7 @@ function searchRecipes(recipe) {
 
         $("#searchResults").empty();
         //loop through array response to find the forecasts
-        for (var i = 1; i <= 10; i++) {
+        for (var i = 0; i <= 3; i++) {
 
             var newCard = $("<div>").attr("class", "uk-child-width-1-2@s uk-grid-match");
 
@@ -61,7 +61,10 @@ $("#searchBtn").on("click", function (event) {
     recipe = $("#searchInput").val().trim();
     console.log("You searched for " + recipe)
     if (recipe != "") {
-        storedRecipes.push(recipe);
+
+        if (storedRecipes.indexOf(recipe) === -1) {
+            storedRecipes.push(recipe);
+        }
         localStorage.setItem("storedRecipes", JSON.stringify(storedRecipes));
         recentlySearched();
         searchRecipes(recipe);
@@ -74,3 +77,12 @@ $("#recentlySearched").on("click", "button", function (event) {
 
     searchRecipes(prevRecipe, recipe);
 });
+
+function clearHistory() {
+
+    $("#recentlySearched").empty();
+    storedRecipes = [];
+    localStorage.setItem("storedRecipes", JSON.stringify(storedRecipes));
+
+};
+$("#clearHistory").click(clearHistory);

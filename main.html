@@ -55,10 +55,13 @@
             </div>
         </nav>
         <section>
-            <div id="recentlySearched"></div>
             <div class="uk-container">
-                <div id="searchResults"></div>
-
+                <div id="recentlySearched" class="recent-search"></div>
+                <button id="clearHistory" class="uk-button uk-button-danger">Clear History</button>
+                <div class="uk-container-small">
+                    <div id="searchResults" class="uk-grid-row-large uk-child-width-1-2@s uk-text-center" uk-grid>
+                    </div>
+                </div>
             </div>
             </div>
         </section>
@@ -76,6 +79,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script type="text/javascript" src="search.js"></script>
+
 </body>
 
 </html>
