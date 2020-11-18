@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Passport Authentication</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="background-herbs">
+
+            <nav class="navbar navbar-light bg-light">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Drop Down
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Browse</a>
+                        <a class="dropdown-item" href="#">Create a Recipe</a>
+                        <a class="dropdown-item" href="#">Shopping List</a>
+                        <a class="dropdown-item" href="#">My Food Playlists</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">My Account</a>
+                    </div>
+                </div>
+                <h1 class="name">User Name</h1>
+                <form class="form-inline">
+                    <button class="btn btn-danger" type="submit">Log Out</button>
+                </form>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <nav class="uk-navbar-container" uk-navbar>
+            <div class="uk-navbar-center">
+
+                <div class="uk-navbar-item">
+                    <form class="uk-search uk-search-navbar">
+                        <button id="searchBtn" uk-search-icon></button>
+                        <input class="uk-search-input" id="searchInput" type="search"
+                            placeholder="Looking for something new...?">
+                    </form>
+                </div>
+
+            </div>
+        </nav>
+        <section>
+            <div class="uk-container">
+                <div id="searchResults"></div>
+
+            </div>
+        </section>
+    </main>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+    <script type="text/javascript" src="search.js"></script>
+</body>
+
+</html>

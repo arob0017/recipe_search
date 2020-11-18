@@ -1,0 +1,49 @@
+
+.login-img {
+    background-image: url("hands-food.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    padding: 1.5rem 2rem;
+}
+
+.row {
+    margin: 10%;
+}
+
+.background-herbs {
+    height: 250px;
+    width: 100%;
+    margin-bottom: 25px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    background-image: url("spices.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.bg-light {
+    background-color: transparent !important;
+}
+.fa-hamburger {
+    color: black;
+}
+
+img{
+    float: left;
+}
+
+.acc-info {
+    margin-left: 3%;
+    margin-top: 5px;
+}
+
+.name {
+    text-align: center;
+    color: white;
+    font-size: xxx-large;
+    font-weight: 500;
+    
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
